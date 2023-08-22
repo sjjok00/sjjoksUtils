@@ -104,7 +104,7 @@ public class ChineseHolidayUtil {
     }
 
     /**
-     * 计算指定日期范围内的工作日列表。
+     * 获取指定日期范围内的工作日列表。
      *
      * @param startDate 范围的起始日期，格式为"yyyy-MM-dd"
      * @param endDate   范围的结束日期，格式为"yyyy-MM-dd"
@@ -130,6 +130,14 @@ public class ChineseHolidayUtil {
         return workdays;
     }
 
+    /**
+     * 获取指定日期范围内的节假日列表。
+     *
+     * @param startDate 范围的起始日期，格式为"yyyy-MM-dd"
+     * @param endDate   范围的结束日期，格式为"yyyy-MM-dd"
+     * @return 指定日期范围内的节假日列表
+     * @throws IOException 如果读取ICS文件时发生I/O错误
+     */
     public List<String> getHolidaysBetween(String startDate, String endDate) throws IOException {
         List<String> holidays = new ArrayList<>();
 
